@@ -12,3 +12,4 @@
 */
 
 Route::get('/', 'HomeController@showWelcome');
+Route::resource('topics', 'TopicsController');

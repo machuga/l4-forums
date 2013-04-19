@@ -30,4 +30,9 @@ class BaseArray
     {
         return $this->attributes[$key] = $val;
     }
+
+    public function toArray()
+    {
+        return array_merge($this->attributes, $this->relations);
+    }
 }
