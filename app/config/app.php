@@ -113,6 +113,9 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
+        // third party
+        'Machuga\Haml\HamlServiceProvider'
+        //'Villimagg\LaravelMthaml\LaravelMthamlServiceProvider'
 	),
 
 	/*

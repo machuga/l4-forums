@@ -2,7 +2,7 @@
 
 class HomeController extends BaseController {
 
-    protected $layout = 'layouts.main';
+    protected $layout = 'layouts.application';
 
     /*
     |--------------------------------------------------------------------------
@@ -26,7 +26,7 @@ class HomeController extends BaseController {
     public function showWelcome()
     {
         $categories = $this->categoryRepository->findAll();
-        $this->layout->content = View::make('hello', compact('categories'));
+        $this->layout->content = View::make('categories.index', compact('categories'));
     }
 
 }

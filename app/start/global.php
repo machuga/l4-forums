@@ -65,3 +65,10 @@ App::error(function(Exception $exception, $code)
 */
 
 require __DIR__.'/../filters.php';
+
+if (! function_exists('render')) {
+    function render($viewName, $data = [])
+    {
+        return View::make($viewName, $data)->render();
+    }
+}

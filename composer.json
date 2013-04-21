@@ -1,21 +1,6 @@
 {
-    "repositories": [
-        {
-            "type":"package",
-            "package": {
-                "name": "villimagg/Laravel-MtHaml",
-                "version":"master",
-                "source": {
-                    "url": "https://github.com/villimagg/Laravel-MtHaml.git",
-                    "type": "git",
-                    "reference":"master"
-                }
-            }
-        }
-    ],
     "require": {
-        "laravel/framework": "4.0.*",
-        "villimagg/Laravel-MtHaml": "master"
+        "laravel/framework": "4.0.*"
     },
     "autoload": {
         "classmap": [
@@ -31,4 +16,4 @@
         "post-update-cmd": "php artisan optimize"
     },
     "minimum-stability": "dev"
-    }
+}

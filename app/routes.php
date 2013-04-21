@@ -11,5 +11,6 @@
 |
 */
 
-Route::get('/', 'HomeController@showWelcome');
-Route::resource('topics', 'TopicsController');
+Route::get('/', 'CategoriesController@index');
+Route::resource('categories', 'CategoriesController');
+Route::resource('categories.topics', 'TopicsController');

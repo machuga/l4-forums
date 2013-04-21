@@ -1,0 +1,39 @@
+!!!
+%html.no-js(lang='en')
+  %head
+    %meta(charset="utf-8")
+    %meta(name="viewport" content="width=device-width, initial-scale=1")
+
+    %title= 'Forums'
+
+    %link(rel='stylesheet' media='all' href="#{URL::asset('stylesheets/vendor/bootstrap.min.css')}")
+    %link(rel='stylesheet' media='all' href="#{URL::asset('stylesheets/vendor/bootstrap-responsive.min.css')}")
+    %link(rel='stylesheet' media='all' href="#{URL::asset('stylesheets/main.css')}")
+  %body
+    != render('shared._main_nav')
+    .container-fluid
+      .row-fluid
+        .span6
+          %h3 Forums
+        .span6
+          %ul.nav.nav-pills
+            %li.active
+              %a(href='#') Home
+            %li
+              %a(href='#') Users
+            %li
+              %a(href='#') Search
+            %li
+              %a(href='#') Profile
+            %li
+              %a(href='#') Logout
+      .row-fluid
+        .span12
+          = render('shared/_breadcrumbs')
+          = $content
+
+  %script(src= URL::asset('javascripts/vendor/jquery.min.js'))
+  %script(src= URL::asset('javascripts/vendor/bootstrap.min.js'))
+  %script(src= URL::asset('javascripts/vendor/underscore.min.js'))
+  %script(src= URL::asset('javascripts/vendor/backbone.min.js'))
+  %script(src= URL::asset('javascripts/main.js'))

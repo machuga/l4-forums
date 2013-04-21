@@ -2,8 +2,6 @@
 
 class TopicsController extends BaseController
 {
-    public $layout = 'layouts.topics';
-
     public function __construct(TopicRepository $topicRepo)
     {
         $this->topicRepo = $topicRepo;
@@ -48,6 +46,7 @@ class TopicsController extends BaseController
      */
     public function show($id)
     {
+        $this->layout->content = View::make('topics.show', ['topic' => 'hello']);
         //
     }
 

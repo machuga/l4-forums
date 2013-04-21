@@ -19,6 +19,7 @@ class CategoryRepositoryArray implements CategoryRepository
 
     public function findById($id)
     {
+        $id = (int) $id;
         $results = array_filter($this->categories, function($cat) use ($id) {
             return $cat->id === $id;
         });

@@ -1,0 +1,16 @@
+- if ($categories)
+  %table.table
+    %thead
+      %tr
+        %th Category
+        %th Info
+        %th Last Post
+    %tbody
+      %tr
+      - foreach ($categories as $category)
+        %tr
+          %td= link_to_route('categories.show', $category->name, $category->id)
+
+          %td
+            Topics: #{count($category->topics)}
+          %td Coming
